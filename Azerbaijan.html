@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAWAS</title>
+
+    <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+     <!-- Fonts Google  -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+     <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+     <!-- Styles CSS -->
+        <link rel="stylesheet" href="css/Offers1.CSS">
+
+ 
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+        <i class="fas fa-plane-departure"></i> HAWAS </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Destinations">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Offers">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                <li class="nav-item">
+            </ul>
+        </div>
+
+        <!-- Dark Mode Toggle Button -->
+        <button id="themeToggle" class="btn btn-outline-light dark-mode-toggle">
+            <i id="themeIcon" class="bi bi-moon"></i>
+        </button>
+
+        <!-- Shopping Cart -->
+
+    
+        <button class="btn btn-outline-light position-relative cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </button>
+        <div class="nav-underline"></div>
+
+    </div>
+</nav>
+
+
+<!-- Carousel -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+    
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="images/1.jpg" class="d-block w-100" alt="Desert">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Magical Desert Experience</h3>
+                <p>Discover golden sands under starry skies</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images/2.jpg" class="d-block w-100" alt="Desert">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Camel Safari Adventure</h3>
+                <p>Authentic desert caravan experience</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="images/3.jpg" class="d-block w-100" alt="Desert">
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Luxury Under the Stars</h3>
+                <p>Premium camp accommodation in the desert</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<!-- Main Content -->
+<div class="container py-5" style="margin-top: 80px;">
+    <!-- Main Header -->
+    <div class="row mb-5">
+        <div class="col-12 text-center">
+            <h1 class="display-4 fw-bold text-primary">Explore Azerbaijan with HAWAS</h1>
+            <p class="lead">5 Days of Unique Desert Adventures</p>
+        </div>
+    </div>
+
+    <!-- Key Information -->
+    <div class="row g-4 mb-5">
+        <!-- Left Side -->
+        <div class="col-lg-8">
+            <div class="booking-card p-4 mb-4">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-calendar-date fs-3 text-primary me-3"></i>
+                            <div>
+                                <h6>Duration</h6>
+                                <p class="mb-0">5 Days / 4 Nights</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-currency-exchange fs-3 text-primary me-3"></i>
+                            <div>
+                                <h6>Starting From</h6>
+                                <p class="mb-0">43 2000 DZD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-people fs-3 text-primary me-3"></i>
+                            <div>
+                                <h6>Group Size</h6>
+                                <p class="mb-0">2-7 People</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add to Cart Button -->
+            <div class="d-grid gap-2 mb-5">
+                <button class="btn btn-primary btn-lg" onclick="addToCart('Explore Azerbaijan with HAWAS', 432000)">
+                    <i class="bi bi-cart-plus me-2"></i>Add to Cart (43 2000 DZD)
+                </button>
+            </div>
+
+            <!-- Detailed Description -->
+            <section class="mb-5">
+                <h3 class="mb-4"><i class="bi bi-journal-text me-2"></i>Trip Overview</h3>
+                <p class="lead">
+                    Discover the perfect combination of Baku and Gabala, two gems of this fascinating country.
+In Baku, explore the old fortified city, a UNESCO World Heritage Site, with its picturesque streets and historic monuments. Soak up the city's cosmopolitan atmosphere by visiting its modern neighborhoods and strolling along the lively promenade.
+Then, head to Gabala, where nature reigns supreme. Admire the breathtaking landscapes of mountains, lush forests, and crystal-clear lakes. Indulge in the outdoor activities.
+                </p>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <i class="bi bi-check2-circle text-success me-3"></i>
+                            <p>Billet d’avion avec TURKISH AIRLINES</p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="bi bi-check2-circle text-success me-3"></i>
+                            <p>5-night accommodation at the PORT RIVOLI BAKU HOTEL with bed and breakfast.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <i class="bi bi-check2-circle text-success me-3"></i>
+                            <p>2-night accommodation at the GARDEN GABALA HOTEL with bed and breakfast.</p>
+                        </div>
+                        <div class="d-flex">
+                            <i class="bi bi-check2-circle text-success me-3"></i>
+                            <p>Professional tour guide
+                                to accompany you throughout your stay.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Side -->
+        <div class="col-lg-4">
+            <div class="card border-primary h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="bi bi-info-circle me-2"></i>Quick Facts</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-geo-alt-fill fs-5 me-2 text-primary"></i>
+                            <strong>Location:</strong> bakou, Azerbaijan
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-activity fs-5 me-2 text-primary"></i>
+                            <strong>Difficulty:</strong> Moderate
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-sun fs-5 me-2 text-primary"></i>
+                            <strong>Best Time:</strong> September - April
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-translate fs-5 me-2 text-primary"></i>
+                            <strong>Languages:</strong> English, French,
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Schedule -->
+    <section class="timeline">
+        <h3 class="mb-5 text-center"><i class="bi bi-map me-2"></i>Daily Itinerary</h3>
+        
+        <!-- Day 1 -->
+        <div class="timeline-step">
+            <div class="timeline-icon">
+                <i class="bi bi-1-circle"></i>
+            </div>
+            <div class="bg-light p-4 rounded-3 shadow-sm">
+                <h4 class="text-primary">Day 1: Exploring Baku</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-clock-history me-2"></i>
+                            <span>Stage 1: 8:00 AM - 11:00 AM</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-pin-map me-2"></i>
+                            <span>Visit the Old City (Icherisheher)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Visit Heydar Aliyev Center
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Lunch and leisure at Baku Boulevard
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Explore modern Baku
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="timeline-step">
+            <div class="timeline-icon">
+                <i class="bi bi-2-circle"></i>
+            </div>
+            <div class="bg-light p-4 rounded-3 shadow-sm">
+                <h4 class="text-primary">Day 2: Nardaran and Mud Volcanoes</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-sunrise me-2"></i>
+                            <span>Visit the Mud Volcanoes
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-camera me-2"></i>
+                            <span>Professional photoshoot</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                2-hour Lunch and rest
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Return to Baku and visit the Caspian Sea promenade in the evening
+                            </li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Day 3 -->
+        <div class="timeline-step">
+            <div class="timeline-icon">
+                <i class="bi bi-3-circle"></i>
+            </div>
+            <div class="bg-light p-4 rounded-3 shadow-sm">
+                <h4 class="text-primary">Day 3: Visiting Quba</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-sunrise me-2"></i>
+                            <span>Visit Quba Museum
+
+                            </span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-Quba me-2"></i>
+                            <span>Visit the Genocide Memorial Museum</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                2-hour Lunch and rest
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Visit Shyafran National Park
+                            </li>
+        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <!-- Day 4 -->
+        <div class="timeline-step">
+            <div class="timeline-icon">
+                <i class="bi bi-4-circle"></i>
+            </div>
+            <div class="bg-light p-4 rounded-3 shadow-sm">
+                <h4 class="text-primary">Day 4: Gabala</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-clock-history me-2"></i>
+                            <span>Stage 1: 8:00 AM - 11:00 AM</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-pin-map me-2"></i>
+                            <span>Visit Gabala Waterfalls</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Outdoor activities (hiking or mountain biking)r
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Lunch and rest 
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Visit Gabala Resort or enjoy winter sports like skiing
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- Day 4 -->
+      <div class="timeline-step">
+        <div class="timeline-icon">
+            <i class="bi bi-4-circle"></i>
+        </div>
+        <div class="bg-light p-4 rounded-3 shadow-sm">
+            <h4 class="text-primary">Day 4: Gabala</h4>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-clock-history me-2"></i>
+                        <span>Stage 1: 8:00 AM - 11:00 AM</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-pin-map me-2"></i>
+                        <span>Visit Gabala Waterfalls</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-dot me-2"></i>
+                            Outdoor activities (hiking or mountain biking)r
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-dot me-2"></i>
+                            Lunch and rest 
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-dot me-2"></i>
+                            Visit Gabala Resort or enjoy winter sports like skiing
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+           <!-- Day 5 -->
+           <div class="timeline-step">
+            <div class="timeline-icon">
+                <i class="bi bi-5-circle"></i>
+            </div>
+            <div class="bg-light p-4 rounded-3 shadow-sm">
+                <h4 class="text-primary">Day : Shamakhi</h4>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-clock-history me-2"></i>
+                            <span>Stage 1: 8:00 AM - 10:00 AM</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="bi bi-pin-map me-2"></i>
+                            <span>Visit Shamakhi Museum</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Visit the Shamakhi Astrophysical Observatory
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Lunch and rest
+                            </li>
+                            <li class="mb-2">
+                                <i class="bi bi-dot me-2"></i>
+                                Visit the Diri Baba Mausoleum and return to Baku
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    </section>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header ">
+                <h5 class="modal-title"><i class="bi bi-cart3 me-2"></i>Shopping Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems" class="mb-3">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <hr>
+                <div class="d-flex justify-content-between">
+                    <h5>Total:</h5>
+                    <h5 id="cartTotal">0</h5>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continue Shopping</button>
+                <a href="cardvisa.html"><button type="button" class="btn btn-primary">Proceed to Checkout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        themeIcon.className = theme === "dark" ? "bi bi-sun" : "bi bi-moon";
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "light" ? "dark" : "light");
+    });
+
+    // Active Link Highlight
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function setActiveLink() {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+            
+            if (section) {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    link.classList.add("active");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+      // and Dark Mode Toggle
+
+
+
+     // Underline    
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navUnderline = document.createElement("div");
+    navUnderline.classList.add("nav-underline");
+    document.querySelector(".navbar").appendChild(navUnderline);
+
+    function moveUnderline(link) {
+        const rect = link.getBoundingClientRect();
+        navUnderline.style.width = `${rect.width}px`;
+        navUnderline.style.left = `${link.offsetLeft}px`;
+    }
+
+    // Set underline on page load
+    const activeLink = document.querySelector(".nav-link.active");
+    if (activeLink) moveUnderline(activeLink);
+
+    // Move underline when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+            moveUnderline(link);
+        });
+    });
+
+    // Update underline while scrolling
+    window.addEventListener("scroll", function () {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+
+            if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+                moveUnderline(link);
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function setActiveLink() {
+            let currentPath = window.location.pathname.split("/").pop(); // Get current page name
+
+            if (currentPath === "" || currentPath === "index.html") {
+                currentPath = "index.html"; // Default to index if no specific page
+            }
+
+            navLinks.forEach(link => {
+                let linkPath = link.getAttribute("href");
+
+                if (linkPath === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        }
+
+        setActiveLink();
+    });
+    // and Underline
+
+
+
+    // Cart functionality
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    function updateCartDisplay() {
+        // Update counter
+        document.getElementById('cartCounter').textContent = cartItems.length;
+        
+        // Update modal content
+        const cartItemsDiv = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+        
+        cartItems.forEach((item, index) => {
+            total += item.price;
+            
+            const itemHTML = `
+
+                <div class="cart-item d-flex justify-content-between align-items-center p-2 rounded mb-2">
+                    <div>
+                        <h6 class="mb-0">${item.title}</h6>
+                        <small class="text-muted">$${item.price}</small>
+                    </div>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            `;
+            cartItemsDiv.innerHTML += itemHTML;
+        });
+        
+        cartTotal.textContent = `$${total}`;
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function addToCart(title, price) {
+        cartItems.push({ title, price });
+        updateCartDisplay();
+    }
+
+    function removeFromCart(index) {
+        cartItems.splice(index, 1);
+        updateCartDisplay();
+    }
+
+    // Initialize cart on page load
+    updateCartDisplay();
+   // And Cart functionality
+
+
+
+
+    // Scroll to Top Button
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+      // Scroll to Top Button
+</script>
+
+</body>
+</html>

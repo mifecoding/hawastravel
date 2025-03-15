@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAWAS</title>
+
+    <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+     <!-- Fonts Google  -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+     <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+     <!-- Styles CSS -->
+        <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+        <i class="fas fa-plane-departure"></i> HAWAS </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Destinations">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Offers">Offers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+                <li class="nav-item">
+            </ul>
+        </div>
+
+        <!-- Dark Mode Toggle Button -->
+        <button id="themeToggle" class="btn btn-outline-light dark-mode-toggle">
+            <i id="themeIcon" class="bi bi-moon"></i>
+        </button>
+
+        <!-- Shopping Cart -->
+        <button class="btn btn-outline-light position-relative cart-button" data-bs-toggle="modal" data-bs-target="#cartModal">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCounter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+        </button>
+        <div class="nav-underline"></div>
+
+    </div>
+</nav>
+
+<!-- And Navigation Bar -->
+
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <img src="images/logo.png" alt="Logo" class="logo">
+        <h1 class="display-4">Unique Experiences</h1>
+        <p class="lead">Create unforgettable memories</p>
+        
+        <!-- Search Form -->
+        <form id="searchForm" class="search-form">
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-3">
+                    <select class="form-select" aria-label="Tour Type">
+                        <option selected>Tour Type</option>
+                        <option value="1">Adventure</option>
+                        <option value="2">Cultural</option>
+                        <option value="3">Nature</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" placeholder="Destination">
+                </div>
+                <div class="col-md-3">
+                    <input type="date" class="form-control" placeholder="Departure Date">
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-search"></i> Search Tours
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- And Hero Section -->
+
+
+<!-- Popular Destinations -->
+<div id="Destinations" class="container mt-5">
+    <h2 class="section-title">Popular Destinations</h2>
+    <div class="row mt-3 g-4">
+        <div class="col-md-4 col-sm-12">
+            <div class="destination-card">
+                <img src="images/backgrawnd.jpg" alt="Desert Trip">
+                <span class="price-badge">$899</span>
+                <div class="destination-info">
+                    <h5>Sahara Desert Expedition</h5>
+                    <p>3-day luxury desert camping experience with camel rides</p>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star-half-alt text-warning"></i>
+                        4.8/5
+                    </div>
+                    <button class="book-now float-end">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="destination-card">
+                <img src="images/4.jpg" alt="Mountain Trip">
+                <span class="price-badge">$1299</span>
+                <div class="destination-info">
+                    <h5>Alpine Mountain Trek</h5>
+                    <p>Guided mountain climbing adventure for all levels</p>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        4.9/5
+                    </div>
+                    <button class="book-now float-end">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="destination-card">
+                <img src="images/1.jpg" alt="Beach Trip">
+                <span class="price-badge">$1599</span>
+                <div class="destination-info">
+                    <h5>Tropical Beach Resort</h5>
+                    <p>All-inclusive 7-day beach vacation package</p>
+                    <div class="rating">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        4.7/5
+                    </div>
+                    <button class="book-now float-end">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- And Popular Destinations -->
+
+
+<!-- Popular Offers -->
+<div id="Offers" class="container mt-5">
+    <h2 class="section-title">Popular Offers</h2>
+    <div class="slider">
+        <div class="card-container" id="cardContainer">
+            <div class="card position-relative">
+                <img src="images/backgrawnd.jpg" class="card-img-top" alt="Beach">
+                <div class="trip-info">7 Days / 6 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i>  382000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Explore Azerbaijan with HAWAS</h5>
+                    <ul>
+                        <li><i class="fas fa-hotel"></i> 4-Star Accommodation</li>
+                        <li><i class="fas fa-utensils"></i> Daily Breakfast</li>
+                        <li><i class="fas fa-plane"></i> Round-trip Tickets</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card position-relative">
+                <img src="images/3.jpg" class="card-img-top" alt="Mountains">
+                <div class="trip-info">5 Days / 4 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i>  475000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Mountain Adventure</h5>
+                    <ul>
+                        <li><i class="fas fa-campground"></i> Stay in a Mountain Cabin</li>
+                        <li><i class="fas fa-hiking"></i> Daily Hiking Tours</li>
+                        <li><i class="fas fa-bus"></i> Guided Tours</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card position-relative">
+                <img src="images/4.jpg" class="card-img-top" alt="Beach">
+                <div class="trip-info">7 Days / 6 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i> 432000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Explore Azerbaijan with HAWA</h5>
+                    <ul>
+                        <li><i class="fas fa-hotel"></i> 4-Star Accommodation</li>
+                        <li><i class="fas fa-utensils"></i> Daily Breakfast</li>
+                        <li><i class="fas fa-plane"></i> Round-trip Tickets</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card position-relative">
+                <img src="images/backgrawnd.jpg" class="card-img-top" alt="Mountains">
+                <div class="trip-info">5 Days / 4 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i>  438000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Mountain Adventure</h5>
+                    <ul>
+                        <li><i class="fas fa-campground"></i> Stay in a Mountain Cabin</li>
+                        <li><i class="fas fa-hiking"></i> Daily Hiking Tours</li>
+                        <li><i class="fas fa-bus"></i> Guided Tours</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card position-relative">
+                <img src="images/2.jpg" class="card-img-top" alt="Beach">
+                <div class="trip-info">7 Days / 6 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i>  390000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Romantic Getaway in Paris</h5>
+                    <ul>
+                        <li><i class="fas fa-hotel"></i> 4-Star Accommodation</li>
+                        <li><i class="fas fa-utensils"></i> Daily Breakfast</li>
+                        <li><i class="fas fa-plane"></i> Round-trip Tickets</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+            <div class="card position-relative">
+                <img src="images/1.jpg" class="card-img-top" alt="Mountains">
+                <div class="trip-info">5 Days / 4 Nights</div>
+                <div class="price-tag"><i class="fas fa-money-bill"></i> 432000DZA</div>
+                <div class="card-body">
+                    <h5 class="card-title">Mountain Adventure</h5>
+                    <ul>
+                        <li><i class="fas fa-campground"></i> Stay in a Mountain Cabin</li>
+                        <li><i class="fas fa-hiking"></i> Daily Hiking Tours</li>
+                        <li><i class="fas fa-bus"></i> Guided Tours</li>
+                    </ul>
+                    <a href="Azerbaijan.html"><button class="btn-book">Book Now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- And Popular Offers -->
+
+
+<!-- Reviews Section -->    
+<div id="Reviews" class="container mt-5">
+    <h2 class="section-title">Popular Reviews</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="review-card">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Mohamed Ali" class="review-img">
+                <h4>Mohamed Ali</h4>
+                <p class="star-rating">★★★★★</p>
+                <p>Excellent service! Highly recommend trying it.</p>
+                <p class="review-date">March 12, 2025</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="review-card">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Sarah Hassan" class="review-img">
+                <h4>Sarah Hassan</h4>
+                <p class="star-rating">★★★★☆</p>
+                <p>The experience was good, but some improvements are needed.</p>
+                <p class="review-date">March 10, 2025</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="review-card">
+                <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Ahmed Mostafa" class="review-img">
+                <h4>Ahmed Mostafa</h4>
+                <p class="star-rating">★★★☆☆</p>
+                <p>Average service, I hope new features will be added.</p>
+                <p class="review-date">March 8, 2025</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- And Reviews Section -->
+
+
+<!-- Footer Section -->
+<footer>
+    <div class="container p-4">
+        <div class="row">
+            <!-- About Section with Logo -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5><img src="images/logo.png" alt="HAWAS Logo" width="40"> HAWAS</h5>
+                <p>At HAWAS, we’re revolutionizing the way travelers discover and book tours. As an online marketplace, we don’t create or run tours ourselves—instead, we connect adventurers with trusted third-party tour operators worldwide.
+                </p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Contact Us</h5>
+                <ul>
+                    <li><i class="fas fa-envelope me-2"></i> <a href="mailto:contact@hawas.com">contact@hawas.com</a></li>
+                    <li><i class="fas fa-phone me-2"></i> <a href="tel:+1234567890"> 0541 99 39 75</a></li>
+                    <li><i class="fas fa-phone me-2"></i> <a href="tel:+1234567890"> 0778 27 49 87</a></li>
+                    <li><i class="fas fa-phone me-2"></i> <a href="tel:+1234567890"> 0790 76 55 21</a></li>
+                    <li><i class="fas fa-map-marker-alt me-2"></i>CITÉ LE LOGIS N66 LA PROVALE KOUBA</li>
+                </ul>
+                <input type="email" class="email-input" placeholder="Enter your email" aria-label="Email">
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Follow Us</h5>
+                <div class="social-icons">
+                    <a href="https://web.facebook.com/profile.php?id=61573804487828&rdid=PMeeF4dTbj4MPjJO&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F12AjcyWN9rM%2F%3F_rdc%3D1%26_rdr#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-tiktok fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright Section -->
+        <div class="copyright mt-4">
+            &copy; 2025 HAWAS. All Rights Reserved.
+        </div>
+    </div>
+
+</footer>
+<!-- And Footer Section -->
+
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+  <!-- And Back to Top Button -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        themeIcon.className = theme === "dark" ? "bi bi-sun" : "bi bi-moon";
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "light" ? "dark" : "light");
+    });
+
+    // Active Link Highlight
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function setActiveLink() {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+            
+            if (section) {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    link.classList.add("active");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+      // And Dark Mode Toggle
+
+
+
+     // Underline    
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navUnderline = document.createElement("div");
+    navUnderline.classList.add("nav-underline");
+    document.querySelector(".navbar").appendChild(navUnderline);
+
+    function moveUnderline(link) {
+        const rect = link.getBoundingClientRect();
+        navUnderline.style.width = `${rect.width}px`;
+        navUnderline.style.left = `${link.offsetLeft}px`;
+    }
+
+    // Set underline on page load
+    const activeLink = document.querySelector(".nav-link.active");
+    if (activeLink) moveUnderline(activeLink);
+
+    // Move underline when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+            moveUnderline(link);
+        });
+    });
+
+    // Update underline while scrolling
+    window.addEventListener("scroll", function () {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+
+            if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+                moveUnderline(link);
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function setActiveLink() {
+            let currentPath = window.location.pathname.split("/").pop(); // Get current page name
+
+            if (currentPath === "" || currentPath === "index.html") {
+                currentPath = "index.html"; // Default to index if no specific page
+            }
+
+            navLinks.forEach(link => {
+                let linkPath = link.getAttribute("href");
+
+                if (linkPath === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        }
+
+        setActiveLink();
+    });
+    // And Underline
+
+
+    // Home link
+    document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navUnderline = document.createElement("div");
+    navUnderline.classList.add("nav-underline");
+    document.querySelector(".navbar-nav").appendChild(navUnderline);
+
+    function moveUnderline(link) {
+        const { offsetLeft, offsetWidth } = link;
+        navUnderline.style.width = `${offsetWidth}px`;
+        navUnderline.style.transform = `translateX(${offsetLeft}px)`;
+    }
+
+    // Identify the Home link
+    const homeLink = document.querySelector(".nav-link[href='index.html']");
+    const activeLink = document.querySelector(".nav-link.active");
+
+    // Move underline to active link on page load
+    if (activeLink) moveUnderline(activeLink);
+    else if (homeLink) moveUnderline(homeLink); // Default to Home if no active link is found
+
+    // Move underline when clicking on a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            this.classList.add("active");
+            moveUnderline(this);
+        });
+    });
+
+    // Update active link when scrolling
+    window.addEventListener("scroll", function () {
+        let fromTop = window.scrollY;
+        let foundActive = false;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+            if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+                moveUnderline(link);
+                foundActive = true;
+            }
+        });
+
+        // If no section is active (when scrolled to the top), set Home as active
+        if (!foundActive) {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            homeLink.classList.add("active");
+            moveUnderline(homeLink);
+        }
+    });
+});
+    // And Home link
+
+
+   // Popular Offers
+   function slideCards() {
+            const container = document.getElementById("cardContainer");
+            setInterval(() => {
+                container.style.transition = "transform 0.5s ease-in-out";
+                container.style.transform = "translateX(-320px)";
+                setTimeout(() => {
+                    container.appendChild(container.firstElementChild);
+                    container.style.transition = "none";
+                    container.style.transform = "translateX(0)";
+                }, 500);
+            }, 3000);
+        }
+        slideCards();
+    // And Popular Offers
+
+    // Cart functionality
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    function updateCartDisplay() {
+        // Update counter
+        document.getElementById('cartCounter').textContent = cartItems.length;
+        
+        // Update modal content
+        const cartItemsDiv = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+        
+        cartItems.forEach((item, index) => {
+            total += item.price;
+            
+            const itemHTML = `
+                <div class="cart-item d-flex justify-content-between align-items-center p-2 rounded mb-2">
+                    <div>
+                        <h6 class="mb-0">${item.title}</h6>
+                        <small class="text-muted">$${item.price}</small>
+                    </div>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            `;
+            cartItemsDiv.innerHTML += itemHTML;
+        });
+        
+        cartTotal.textContent = `$${total}`;
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function addToCart(title, price) {
+        cartItems.push({ title, price });
+        updateCartDisplay();
+    }
+
+    function removeFromCart(index) {
+        cartItems.splice(index, 1);
+        updateCartDisplay();
+    }
+
+    // Initialize cart on page load
+    updateCartDisplay();
+   // And Cart functionality
+
+
+
+
+   
+    // Scroll to Top Button
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+      // And Scroll to Top Button
+</script>
+
+</body>
+</html>

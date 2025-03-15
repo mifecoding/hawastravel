@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAWAS</title>
+
+    <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+     <!-- Fonts Google  -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+
+     <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+     <!-- Styles CSS -->
+        <link rel="stylesheet" href="css/cardvisa.css">
+
+</head>
+<body>
+
+
+<div class="container mt-5">
+    <div class="card p-4">
+        <h3 class="text-center mb-4">Payment Method</h3>
+        <div class="text-center payment-methods">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" id="visa" title="Visa" alt="Visa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/MasterCard_Logo.svg" id="mastercard" title="MasterCard" alt="MasterCard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/PayPal_Logo_Icon_2014.svg" id="paypal" title="PayPal" alt="PayPal">
+            <img src="images/card.png" id="goldcard" title="Gold Card" alt="Gold Card">
+        </div>
+        <form id="paymentForm">
+            <div id="cardPaymentFields">
+                <div class="mb-4">
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                    </div>
+                </div>
+            </div>
+            <div id="paypalPaymentField" class="mb-3" style="display: none;">
+                <label for="paypalEmail" class="form-label">PayPal Email</label>
+                <input type="email" class="form-control" id="paypalEmail" placeholder="example@paypal.com">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Complete Payment</button>
+        </form>
+        <div id="message" class="mt-3 text-center"></div>
+    </div>
+</div>
+
+
+
+    <!-- Back to Top Button -->
+    <button onclick="scrollToTop()" id="backToTop">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        themeIcon.className = theme === "dark" ? "bi bi-sun" : "bi bi-moon";
+    }
+
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+
+    themeToggle.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "light" ? "dark" : "light");
+    });
+
+    // Active Link Highlight
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function setActiveLink() {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+            
+            if (section) {
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    navLinks.forEach(link => link.classList.remove("active"));
+                    link.classList.add("active");
+                }
+            }
+        });
+    }
+
+    window.addEventListener("scroll", setActiveLink);
+      // and Dark Mode Toggle
+
+
+
+     // Underline    
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const navUnderline = document.createElement("div");
+    navUnderline.classList.add("nav-underline");
+    document.querySelector(".navbar").appendChild(navUnderline);
+
+    function moveUnderline(link) {
+        const rect = link.getBoundingClientRect();
+        navUnderline.style.width = `${rect.width}px`;
+        navUnderline.style.left = `${link.offsetLeft}px`;
+    }
+
+    // Set underline on page load
+    const activeLink = document.querySelector(".nav-link.active");
+    if (activeLink) moveUnderline(activeLink);
+
+    // Move underline when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            link.classList.add("active");
+            moveUnderline(link);
+        });
+    });
+
+    // Update underline while scrolling
+    window.addEventListener("scroll", function () {
+        let fromTop = window.scrollY;
+
+        navLinks.forEach(link => {
+            let section = document.querySelector(link.getAttribute("href"));
+
+            if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+                moveUnderline(link);
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        function setActiveLink() {
+            let currentPath = window.location.pathname.split("/").pop(); // Get current page name
+
+            if (currentPath === "" || currentPath === "index.html") {
+                currentPath = "index.html"; // Default to index if no specific page
+            }
+
+            navLinks.forEach(link => {
+                let linkPath = link.getAttribute("href");
+
+                if (linkPath === currentPath) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        }
+
+        setActiveLink();
+    });
+    // and Underline
+
+    // Cart functionality
+    let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    function updateCartDisplay() {
+        // Update counter
+        document.getElementById('cartCounter').textContent = cartItems.length;
+        
+        // Update modal content
+        const cartItemsDiv = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+        
+        cartItems.forEach((item, index) => {
+            total += item.price;
+            
+            const itemHTML = `
+                <div class="cart-item d-flex justify-content-between align-items-center p-2 rounded mb-2">
+                    <div>
+                        <h6 class="mb-0">${item.title}</h6>
+                        <small class="text-muted">$${item.price}</small>
+                    </div>
+                    <button class="btn btn-danger btn-sm" onclick="removeFromCart(${index})">
+                        <i class="bi bi-trash"></i>
+                    </button>
+                </div>
+            `;
+            cartItemsDiv.innerHTML += itemHTML;
+        });
+        
+        cartTotal.textContent = `$${total}`;
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+
+    function addToCart(title, price) {
+        cartItems.push({ title, price });
+        updateCartDisplay();
+    }
+
+    function removeFromCart(index) {
+        cartItems.splice(index, 1);
+        updateCartDisplay();
+    }
+
+    // Initialize cart on page load
+    updateCartDisplay();
+   // And Cart functionality
+
+
+
+
+
+
+
+
+
+   document.getElementById("paymentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const selectedMethod = document.querySelector(".payment-methods .selected");
+        
+        if (!selectedMethod) {
+            alert("Please select a payment method.");
+            return;
+        }
+        
+        if (selectedMethod.id === "paypal") {
+            const paypalEmail = document.getElementById("paypalEmail").value;
+            if (!paypalEmail.includes("@")) {
+                alert("Please enter a valid PayPal email.");
+                return;
+            }
+        }
+        document.getElementById("message").innerHTML = "<div class='alert alert-success'>Payment processed successfully!</div>";
+    });
+    
+    const paymentMethods = document.querySelectorAll(".payment-methods img");
+    paymentMethods.forEach(method => {
+        method.addEventListener("click", function() {
+            paymentMethods.forEach(icon => icon.classList.remove("selected"));
+            this.classList.add("selected");
+            
+            if (this.id === "paypal") {
+                document.getElementById("cardPaymentFields").style.display = "none";
+                document.getElementById("paypalPaymentField").style.display = "block";
+            } else {
+                document.getElementById("cardPaymentFields").style.display = "block";
+                document.getElementById("paypalPaymentField").style.display = "none";
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+    // Scroll to Top Button
+    const backToTopButton = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    });
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+      // Scroll to Top Button
+</script>
+
+</body>
+</html>

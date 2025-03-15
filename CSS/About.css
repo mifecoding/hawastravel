@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Tajawal',sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #0d6efd;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --navbar-bg: #1a1a1a;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Nar Bar */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    padding: 15px 0;
+}
+
+.navbar a {
+    color: var(--navbar-text) !important;
+    position: relative;
+    padding: 5px 8px;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--active-border);
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.cart-button {
+    margin-left: 15px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.75rem;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+/*  And Nav Bar */
+
+
+
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    color: white;
+    padding: 150px 0;
+}
+
+.feature-card {
+    border: none;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+/* BackToTop */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out;
+}
+#backToTop:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+/*  And BackToTop */
