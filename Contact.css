@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Tajawal',sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #0d6efd;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --navbar-bg: #1a1a1a;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    padding: 15px 0;
+}
+
+.navbar a {
+    color: var(--navbar-text) !important;
+    position: relative;
+    padding: 5px 8px;
+    font-size: 1.1rem;
+}
+
+.navbar .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--active-border);
+}
+
+.dark-mode-toggle {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.cart-button {
+    margin-left: 15px;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.75rem;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+/*  And Nav Bar */
+
+
+ /* Contact Section */   
+ .contact-section {
+    background: white;
+    color: #000000;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Added spacing between cards for mobile view */
+}
+.form-control {
+    border-radius: 8px;
+}
+.btn-primary {
+    width: 100%;
+    border-radius: 8px;
+}
+.contact-info p {
+    font-size: 18px;
+}
+.underline {
+    width: 100px;
+    height: 4px;
+    background-color: #0d6efd;
+    margin: 5px auto 20px;
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        margin-bottom: 30px; /* Increased spacing between cards on smaller screens */
+    }
+}
+ /* And Contact Section */   
+    
+        
+/* BackToTop */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out;
+}
+#backToTop:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+/*  and BackToTop */
