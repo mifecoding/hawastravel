@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: 'Tajawal',sans-serif;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --navbar-bg: #0d6efd;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --navbar-bg: #1a1a1a;
+    --navbar-text: #ffffff;
+    --active-border: #ffcc00;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 500px;
+}
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.payment-methods img {
+    width: 70px;  /* جعل الصورة أعرض */
+    height: 45px; /* تقليل الارتفاع ليصبح الشكل مستطيلاً */
+    cursor: pointer;
+    transition: transform 0.3s, border 0.3s;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid transparent;
+}
+.payment-methods img:hover {
+    transform: scale(1.1);
+}
+.selected {
+    border: 2px solid #007bff;
+}
+
+
+
+
+
+
+
+
+
+
+/* BackToTop */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease-in-out;
+}
+#backToTop:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+/*  And BackToTop */
